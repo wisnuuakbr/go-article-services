@@ -23,14 +23,14 @@ func main() {
 	}
 	defer db.Close()
 
-	// connection to redis
-	redisClient := redis.NewClient(cfg.RedisOptions())
-	defer redisClient.Close()
-
 	// running migration
 	if err := goose.Up(db, "../database/migration"); err != nil {
 		log.Fatalf("failed to run migrations: %v", err)
 	}
+
+	// connection to redis
+	redisClient := redis.NewClient(cfg.RedisOptions())
+	defer redisClient.Close()
 
 	// route
 	r := di.NewRouter(db, redisClient)
