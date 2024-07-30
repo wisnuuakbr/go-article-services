@@ -20,6 +20,8 @@ func NewRouter(db *sql.DB, redisClient *redis.Client) *mux.Router {
 	r := mux.NewRouter()
 	r.HandleFunc("/articles", articleHandler.GetArticle).Methods("GET")
 	r.HandleFunc("/articles", articleHandler.CreateArticle).Methods("POST")
+	r.HandleFunc("/articles/search", articleHandler.SearchArticles).Methods("GET")
+	r.HandleFunc("/articles/{id}", articleHandler.GetArticleByID).Methods("GET")
 
 	return r
 }
