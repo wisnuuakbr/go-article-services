@@ -22,17 +22,24 @@ Clone the project to your directory and install the dependencies.
 
 ```bash
 $ git clone https://github.com/wisnuuakbr/sagala
+```
+```bash
 $ cd sagala
+```
+```bash
 $ go mod tidy
 ```
 
 ## Configuration
 
-Copy the .env.example file and rename it to .env  
+Copy the .env.example file and rename it to .env
+```bash
+$ cp .env.example .env
+```
 Change the config for your local server
 
 ```bash
-APP_NAME = "sagala_test"
+APP_NAME = "sagala"
 APP_ENV = "development"
 APP_PORT = 3000
 
@@ -46,19 +53,22 @@ REDIS_HOST = "localhost"
 REDIS_PORT = 6379
 REDIS_PASSWORD = ""
 REDIS_DB = 0
+
 ```
 
-## Running Server
-
+## Run Application
 ```bash
-$ cd .\cmd\
-$ go run .\main.go
+$ go run .\cmd\main.go
 ```
 
 ## Output
+### POST article:
 
 ![Output Create Response](docs/create_response.png)
 
+### GET All Article:
+
 ![Output GetAll Response](docs/get_all_response.png)
 
+### GET Article with filter
 ![Output Search Response](docs/search_response.png)
