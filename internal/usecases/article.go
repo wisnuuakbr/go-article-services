@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/wisnuuakbr/sagala/internal/entities/repository"
-	"github.com/wisnuuakbr/sagala/internal/infrastructure/cache"
 	"github.com/wisnuuakbr/sagala/internal/infrastructure/datastore"
+	"github.com/wisnuuakbr/sagala/pkg/cache"
 )
 
 // ArticleUsecase is a struct that holds the dependencies for article-related use cases.

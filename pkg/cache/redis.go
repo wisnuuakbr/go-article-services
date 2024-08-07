@@ -25,12 +25,12 @@ func (r *RedisCache) SetCache(key string, value interface{}, expiration time.Dur
 	return r.Client.Set(context.Background(), key, jsonData, expiration).Err()
 }
 
-func (r *RedisCache) GetCache(key string, dest interface{}) error {
-	data, err := r.Client.Get(context.Background(), key).Bytes()
+func (r *RedisCache) GetCache(key string, value interface{}) error {
+	jsonData, err := r.Client.Get(context.Background(), key).Bytes()
 	if err != nil {
 		return err
 	}
-	return json.Unmarshal(data, dest)
+	return json.Unmarshal(jsonData, value)
 }
 
 func (r *RedisCache) DeleteCache(key string) error {

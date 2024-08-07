@@ -6,9 +6,9 @@ import (
 	"github.com/go-redis/redis/v8"
 	"github.com/gorilla/mux"
 	"github.com/wisnuuakbr/sagala/internal/adapters/httphandler"
-	"github.com/wisnuuakbr/sagala/internal/infrastructure/cache"
 	"github.com/wisnuuakbr/sagala/internal/infrastructure/datastore"
 	"github.com/wisnuuakbr/sagala/internal/usecases"
+	"github.com/wisnuuakbr/sagala/pkg/cache"
 )
 
 func NewRouter(db *sql.DB, redisClient *redis.Client) *mux.Router {
