@@ -1,6 +1,6 @@
-# Submission Sagala
+# Simple Web Service
 
-A tech test Sagala using :
+A simple web service Sagala using :
 
 <p align="center"><a href="https://go.dev" target="_blank"><img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" width="400"></a></p>
 
